@@ -25,12 +25,6 @@ void Circuit::readtheFile(){
 
 void Circuit::readAndParseCircuitFile()
 {	
-
-	//map<string, int> inout;
-	//map<int, Wire *> wires;
-	//-vector<Gate *> gates;
-
-
 	ifstream circuit_File;
 
 	string keyword;
@@ -148,11 +142,7 @@ void Circuit::readAndParseCircuitFile()
 	}
 }
 
-// test git
-// HELP
-// TEST NUMBER THREE :D:D:D:D:D:D:D:D:D:D:D:D:D
 
-/*
 void Circuit::readAndParseVectorFile()
 {
 	map<string, int> inout;
@@ -165,18 +155,24 @@ void Circuit::readAndParseVectorFile()
 	int time;
 	int value;
 	int count;
+
 	for(count=0;!vector_File.eof();count++)
 	{
+
 		vector_File >> keyword;
 		if (keyword == "INPUT") {
-			vector_File >> name >> time>>value;
+			vector_File >> name >> time>> value;
 			Event e(inout[name], time, value, count);
 			event_queue.push(e);
 		}
-
+		else if (keyword == "VECTOR") {
+			count = 0;
+			return;
+		}
 	}
 }
-*/
+
+
 void Circuit::runTheSimulation(){
 
 }
