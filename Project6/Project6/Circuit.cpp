@@ -148,6 +148,8 @@ void Circuit::readAndParseCircuitFile()
 	}
 }
 
+// test git
+
 /*
 void Circuit::readAndParseVectorFile()
 {
